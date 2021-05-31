@@ -1,0 +1,38 @@
+.section_about {
+	padding: 5rem 0 4rem 0;
+	.wrapper {
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(calc(300px - 2rem), 1fr)
+		);
+
+		gap: 2rem;
+		@media only screen and (max-width: 775px) {
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(calc(260px - 2rem), 1fr)
+			);
+		}
+
+		& > * {
+			max-width: 40rem;
+			width: 100%;
+		}
+		& figure {
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.info {
+		.p {
+			color: $black-text;
+			margin-top: 3rem;
+		}
+	}
+}

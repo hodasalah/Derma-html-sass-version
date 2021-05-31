@@ -1,0 +1,21 @@
+.section_feat {
+	padding: 10rem 0;
+	text-align: center;
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		& > * {
+			flex: 1;
+		}
+	}
+	.box {
+		max-width: 50rem;
+		margin: 3rem 2rem;
+		padding: 1rem;
+		.p {
+			margin: 2rem 0;
+		}
+	}
+}

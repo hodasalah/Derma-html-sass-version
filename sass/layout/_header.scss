@@ -1,0 +1,142 @@
+.header {
+	// header top section
+	.top_section {
+		padding: 3rem 0;
+		background-color: $white-color;
+		width: 100%;
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media only screen and (max-width: 400px) {
+				flex-wrap: wrap;
+			}
+		}
+		&--logo {
+			max-width: 12rem;
+			margin-right: 2rem;
+			img {
+				display: block;
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+
+		// form search
+		.form {
+			height: 4rem;
+			width: 100%;
+			max-width: 40rem;
+			position: relative;
+
+			.input-group {
+				height: 100%;
+			}
+			&_input {
+				background: transparent;
+				border: 1px solid #777;
+				border-radius: 10rem;
+				outline: 0;
+				height: 100%;
+				width: 100%;
+				padding: 0 2rem;
+				&:focus {
+					border: 2px solid $light-blue;
+					&::placeholder {
+						opacity: 0;
+					}
+				}
+			}
+			&_label {
+				position: absolute;
+				text-transform: uppercase;
+				color: #333;
+				top: 50%;
+				opacity: 0;
+				transform: translateY(-50%);
+				left: 2rem;
+				transition: all 0.5s ease-in-out;
+			}
+			&_input:focus + label {
+				color: $light-blue;
+				top: -1rem;
+				opacity: 1;
+				transform: translateY(0) scale(0.8);
+				word-spacing: 3rem;
+				display: block;
+				background-color: #fff;
+				padding: 0 0.5rem;
+			}
+			&_button {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 2rem;
+				border: 0;
+				background: transparent;
+			}
+			@media only screen and (max-width: 400px) {
+				width: 100%;
+				order: 3;
+				max-width: 100%;
+				margin-top: 2rem;
+			}
+		}
+		// btn menu
+		.mobile_btn {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			border: 2px solid transparent;
+			transition: all 1s ease;
+			display: none;
+			z-index: 1000;
+			span {
+				width: 100%;
+				height: 2px;
+				background-color: $light-blue;
+				display: block;
+				position: relative;
+				&::after,
+				&::before {
+					width: 50%;
+					left: 0;
+					height: 2px;
+					content: "";
+					position: absolute;
+					background-color: $light-blue;
+					transition: all 1s ease;
+				}
+				&::after {
+					transform: translateY(1rem);
+				}
+				&::before {
+					transform: translateY(-1rem);
+				}
+			}
+			&:hover,
+			&.active {
+				transition: all 0.8s ease-in-out;
+				border: 2px solid $white-color;
+				span {
+					background-color: transparent;
+					&::after {
+						transform: translateX(50%) translateY(0) rotate(135deg);
+						margin: auto;
+					}
+					&::before {
+						transform: translateX(50%) translateY(0) rotate(-135deg);
+						margin: auto;
+					}
+				}
+			}
+			@media only screen and (max-width: 940px) {
+				display: flex;
+				margin-left: 2rem;
+			}
+		}
+	}
+}

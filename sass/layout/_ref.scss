@@ -1,0 +1,14 @@
+.section_ref {
+	padding: 2rem 0;
+	.wrapper {
+		display: flex;
+		align-items: center;
+		& > * {
+			display: inline-block;
+		}
+		img {
+			margin-right: 1.5rem;
+		}
+    
+	}
+}

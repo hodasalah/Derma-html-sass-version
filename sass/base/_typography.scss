@@ -1,0 +1,58 @@
+nav li a {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 400;
+	&:active {
+		font-weight: 600;
+	}
+}
+.grey-bg {
+	background-color: $light-grey;
+}
+.light_grey-bg {
+	background-color: $lighten-grey;
+}
+.blue-bg {
+	background-color: $light-blue;
+	color: $white-color;
+}
+.heading {
+	font-family: "fr-med";
+	line-height: 1;
+	font-weight: 400;
+	&_big {
+		font-size: $heading-size;
+	}
+	&_small {
+		font-size: $sub-heading-size;
+	}
+	&_white {
+		color: $white-color;
+	}
+	&_blue {
+		color: $light-blue;
+	}
+}
+.p {
+	font-family: "fr-book";
+	&_big {
+		font-size: $text-size;
+	}
+}
+.link {
+	font-family: "fr-dem";
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: $purple-color;
+	display: inline-block;
+}
+.btn {
+	color: $white-color;
+	background-color: $purple-color;
+	border-radius: 100px;
+	display: inline-block;
+	text-align: center;
+	padding: 1rem 2.8rem;
+	font-size: 2rem;
+	font-family: "fr-dem";
+	font-weight: lighter;
+}

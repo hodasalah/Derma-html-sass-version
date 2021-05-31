@@ -1,0 +1,33 @@
+.section_video {
+	padding: 10rem 0;
+	.wrapper {
+		display: grid;
+		justify-items: center;
+		align-items: center;
+
+		grid-template-columns: 36rem minmax(34rem, 1fr);
+		gap: 2rem;
+		@media only screen and (max-width: 775px) {
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(calc(260px - 2rem), 1fr)
+			);
+		}
+	}
+
+	.info {
+		.p {
+			margin: 2.5rem 0;
+			small {
+				font-weight: 600;
+			}
+		}
+	}
+	.video-box {
+		video {
+			width: 100% !important;
+			height: auto !important;
+			display: block;
+		}
+	}
+}

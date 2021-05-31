@@ -1,0 +1,34 @@
+.section_blog {
+	padding: 10rem 0;
+
+	.blog_boxes {
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(calc(260px - 2rem), 1fr)
+		);
+		gap: 2rem;
+		@media only screen and (max-width: 534px) {
+			justify-items: center;
+		}
+		.box {
+			max-width: 40rem;
+			margin: 3rem 0;
+			width: 100%;
+			&_img {
+				width: 100%;
+				img {
+					display: block;
+					max-width: 100%;
+					width: 100%;
+					height: 100%;
+				}
+			}
+			&_info {
+				.p {
+					margin: 2rem 0;
+				}
+			}
+		}
+	}
+}

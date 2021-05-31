@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";$(".nav li a").on("click",function(e){e.preventDefault(),$(".nav li a").removeClass("active"),$(this).addClass("active")}),$(".mobile_btn").on("click",function(e){$("#nav").toggleClass("active"),$(this).toggleClass("active"),console.log("helo")})});

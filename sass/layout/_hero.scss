@@ -1,0 +1,21 @@
+.section_hero {
+	padding: 5rem 0;
+	background: url("../images/hero.png") no-repeat bottom center;
+	background-size: cover;
+
+	.wrapper {
+		max-width: 40rem;
+		margin: 0 3rem;
+		color: $white-color;
+	}
+	.heading {
+		margin-top: 2rem;
+	}
+	@media only screen and (max-width: 775px) {
+		background: $dark-blue;
+		.wrapper {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+}

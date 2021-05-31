@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "fr-dem";
+	src: url(../fonts/fradm.ttf);
+}
+@font-face {
+	font-family: "fr-book";
+	src: url(../fonts/franklin-gothic-book.ttf);
+}
+@font-face {
+	font-family: "fr-med";
+	src: url(../fonts/Franklin-Gothic-Medium.ttf);
+}
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+html {
+	font-size: 10px;
+	::selection {
+		background-color: $purple-color;
+		color: $white-color;
+	}
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+body {
+	box-sizing: border-box;
+	font-family: "fr-book";
+	font-size: $p-size;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $black-text;
+	position: relative;
+
+	background-color: $white-color;
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $light-grey;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+		background-color: $light-blue;
+	}
+}
+.wrapper {
+	max-width: $layout-width;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0 1.5rem;
+	@media only screen and (max-width: 780px) {
+		max-width: 100%;
+		text-align: center;
+	}
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}

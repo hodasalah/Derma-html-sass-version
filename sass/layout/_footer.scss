@@ -1,0 +1,86 @@
+.footer {
+	width: 100%;
+	height: auto;
+	padding: 8rem 0 5rem 0;
+	.wrapper {
+		display: flex;
+		.foot-content {
+			flex: 2;
+			display: flex;
+			justify-content: space-between;
+
+			figure {
+				align-self: flex-start;
+			}
+			ul {
+				align-self: flex-end;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+
+				li {
+					margin-right: 4rem;
+					position: relative;
+					&::after {
+						position: absolute;
+						top: 0;
+						right: -2rem;
+						content: "|";
+					}
+					&:last-child::after {
+						display: none;
+					}
+				}
+			}
+		}
+		.copy {
+			align-self: flex-end;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			p {
+				font-size: 1.4rem;
+				line-height: 2;
+				text-align: right;
+				font-family: inherit;
+				font-weight: 400;
+				width: 18rem;
+				&:last-child {
+					width: 100%;
+					margin-top: 4rem;
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		@media only screen and (max-width: 760px) {
+			flex-direction: column;
+
+			& > * {
+				flex-direction: column;
+			}
+			.foot-content {
+				figure {
+					align-self: center;
+					margin-bottom: 3rem;
+				}
+				ul {
+					justify-content: center;
+				}
+			}
+			.copy {
+				align-self: center;
+				margin-top: 3rem;
+			}
+			.copy p {
+				width: 100%;
+				max-width: 50rem;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+}
